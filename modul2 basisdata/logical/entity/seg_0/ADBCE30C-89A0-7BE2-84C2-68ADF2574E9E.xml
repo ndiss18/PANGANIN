@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ADBCE30C-89A0-7BE2-84C2-68ADF2574E9E" name="tb_order">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:13:34 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="order_id" id="DD973D8F-8CE5-66B5-FEA9-3A971C6E373E">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:14:36 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="order_date" id="4AF4BCD7-B47C-1893-50BB-56E993A5C441">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:15:14 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total_amount" id="8A048DF9-EA57-46BE-5194-B7F3708D1161">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:16:03 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="shipping_address" id="44E86DF6-5B9B-850D-9365-36E052B10F91">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:20:02 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

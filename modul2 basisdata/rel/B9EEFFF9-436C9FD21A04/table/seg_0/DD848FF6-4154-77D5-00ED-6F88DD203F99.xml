@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DD848FF6-4154-77D5-00ED-6F88DD203F99" name="tb_product">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>A9FA1279-C3EC-3D1F-C9CB-280FF5DA5BF6</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="product_id" id="DFB22C6E-DA53-775C-7C3F-9864003FC364">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>60323CB6-CD87-0FA8-DBB4-D75EA9B9C286</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="product_name" id="E004C156-1FA9-8529-3A7F-B654BF466F68">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>2E8C4C3D-D9B5-7D43-EF4D-4C80D29BB92A</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stock" id="093A16D9-F173-E4F5-473E-1AB49BDE161E">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>7AAF19F5-F6EC-7BB8-6FD3-8FDB59A2C422</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="6C8FA156-55A1-A98E-32A5-71994AC8C976">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>E2589D05-AC84-3EF6-FDD4-084E1A8C214F</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tb_order_detail_tb_order_detail_ID" id="DB448C11-3D28-4BA0-D0EF-BF4D33CF2C59">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:25 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F77ECE9B-DAF0-5F87-ACC0-76AD17EEDBAC" referredColumn="A01F6745-C36E-3694-EFCC-BEE7AA134B8D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D14EF7BE-33A4-9DC5-CD10-038F5261A965" name="tb_product_tb_order_detail_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:25 UTC</createdTime>
+<generatorID>C8423881-6923-959E-A208-51FC5028018C</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DB448C11-3D28-4BA0-D0EF-BF4D33CF2C59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

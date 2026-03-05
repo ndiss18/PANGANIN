@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="order has payment " directorySegmentName="seg_0" id="9B496CA2-129D-B7FE-6633-7FB51206CFEF">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:12:55 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>ADBCE30C-89A0-7BE2-84C2-68ADF2574E9E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E9A8C2E7-C789-0D05-03A1-BDFE8C4D8D44</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

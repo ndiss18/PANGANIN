@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="order contains productv1" directorySegmentName="seg_0" id="C8423881-6923-959E-A208-51FC5028018C">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:12:05 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>409F952C-EAB8-8500-C04F-31846E895FE6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A9FA1279-C3EC-3D1F-C9CB-280FF5DA5BF6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

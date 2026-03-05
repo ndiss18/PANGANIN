@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E9A8C2E7-C789-0D05-03A1-BDFE8C4D8D44" name="tb_payment ">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:29:47 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="payment_id" id="6E025A7D-3B3C-9CF7-AC05-7D0BD3739396">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:41:03 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="payment_date" id="BDBDE584-F768-66A8-7D0C-EFCB5DA89241">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:41:27 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="payment_method" id="3349EFE5-7293-1824-F7E9-6E89EDCF4DA0">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:41:55 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="amount" id="EB7CF275-9919-6274-F4D3-D1EFED257BCC">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:42:42 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="payment_status" id="60B0BE9A-342E-E123-7B14-6C83B4C44C40">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 03:43:07 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<engineerTo>
+<item key="B9EEFFF9-1D8F-E712-4F48-436C9FD21A04" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

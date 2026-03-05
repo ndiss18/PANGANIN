@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="66094519-F67C-F4D0-8817-63BE8D2F78B6" name="tb_order">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>ADBCE30C-89A0-7BE2-84C2-68ADF2574E9E</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="order_id" id="2122EA9B-D78F-F629-6730-9A9474F61BB0">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>DD973D8F-8CE5-66B5-FEA9-3A971C6E373E</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="order_date" id="759233F8-DD41-8D43-33C6-BC86FF88233A">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>4AF4BCD7-B47C-1893-50BB-56E993A5C441</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="total_amount" id="0A0FBAD6-149C-E3B6-B63F-CF604588CDD9">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>8A048DF9-EA57-46BE-5194-B7F3708D1161</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="shipping_address" id="5681D027-E73A-66E0-29AE-FF6FC0181143">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>44E86DF6-5B9B-850D-9365-36E052B10F91</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tb_order_ID" id="96685477-928F-F0DE-F3D1-A033969A4904">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="tb_customer_tb_customer_ID" id="E03A917A-C8C2-1786-C641-5C19A16B9528">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B41EB65D-83B3-4A72-E17A-65AD1F83E1D6" referredColumn="7219EE13-5712-8C02-184F-3741A21B0B65"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="620C4D24-1E27-04C6-0F19-098561E16556" name="tb_order_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="96685477-928F-F0DE-F3D1-A033969A4904"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9CDDFA05-5D01-492E-254D-A30CD2976852" name="tb_order_tb_customer_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-03-05 04:13:24 UTC</createdTime>
+<generatorID>4ED99CA0-E064-0FCF-74DF-19D57D446653</generatorID>
+<ownerDesignName>modul2 basisdata</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E03A917A-C8C2-1786-C641-5C19A16B9528"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
