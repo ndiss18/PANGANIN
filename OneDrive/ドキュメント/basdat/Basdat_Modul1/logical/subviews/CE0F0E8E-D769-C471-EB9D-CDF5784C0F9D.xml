@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Diagram class="oracle.dbtools.crest.swingui.logical.DPVLogical" name="Logical" id="CE0F0E8E-D769-C471-EB9D-CDF5784C0F9D">
+<createdBy>NURUN ANIS</createdBy>
+<modifiedBy>NURUN ANIS</modifiedBy>
+<createdTime>2026-04-08 10:15:09 UTC</createdTime>
+<autoRoute>false</autoRoute>
+<boxInbox>true</boxInbox>
+<showLegend>false</showLegend>
+<showLabels>false</showLabels>
+<showRelAttributes>false</showRelAttributes>
+<gridEnabled>false</gridEnabled>
+<showGrid>false</showGrid>
+<diagramColor>-1</diagramColor>
+<display>false</display>
+<notation>1</notation>
+<objectViews>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="0222F7FC-CAEF-161F-C320-3FDBEF4197E2" otype="Entity" vid="33A87358-50EE-4DE3-7357-28871BF2BAAF">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="675" y="142" width="186" height="122"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="11E18B85-CDF1-7626-4904-4C6B0911F8E4" otype="Entity" vid="E88CA66B-097F-6D9B-EDC8-B1DB81F550DA">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="33" y="38" width="158" height="114"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="6728A4B9-66F7-60D4-351A-26FBC1DB763F" otype="Entity" vid="74554FD8-3CCA-DFCA-FC9D-72376430DDF6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="383" y="248" width="215" height="130"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="8D331E07-65B7-B443-373A-2C71AD66312F" otype="Entity" vid="58AFA804-1D2D-0C5E-366F-365531BC9FB6">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="358" y="37" width="184" height="115"/>
+</OView>
+<OView class="oracle.dbtools.crest.swingui.logical.TVEntity" oid="C65180E4-8133-DB6E-9D58-39D2B799BFF4" otype="Entity" vid="FA3FAA5C-78F0-E6CA-A4C1-A56559F92603">
+<hideElementsInCurrentOnly>false</hideElementsInCurrentOnly>
+<bounds x="61" y="249" width="196" height="122"/>
+</OView>
+</objectViews>
+</Diagram>
