@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="70E5ABC7-398E-ECBC-F22F-FAB95A479DCB" name="tb_digital_product">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:04:29 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="file_size" id="ECB8E537-32E6-D8E1-A993-EB3517DE5E15">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:04:49 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dowload_link" id="F2523F22-B018-7111-390B-F5F076B0EB28">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:05:21 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2AD24296-4BEC-0DC7-00DE-F5348646CAE0" name="tb customer">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:45:58 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="customer_id" id="CCEF9025-99A1-9483-721B-4BE21D12F265">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:46:18 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="full_name" id="3D41BAAB-5E5B-C636-98A8-B73F228F7AF0">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:46:52 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone_number" id="D6D8E998-0372-6273-1565-8CB65CBA0A2B">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:47:15 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="date of birth" id="93472717-79EE-0326-F91B-AF6EEFB6BE43">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:47:39 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

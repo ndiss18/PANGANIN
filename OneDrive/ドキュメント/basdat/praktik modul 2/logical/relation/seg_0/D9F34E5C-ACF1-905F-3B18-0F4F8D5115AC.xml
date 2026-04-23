@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_4" directorySegmentName="seg_0" id="D9F34E5C-ACF1-905F-3B18-0F4F8D5115AC">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:07:40 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A1618080-62D1-9414-EC39-B6074AF9E505</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0F7414EF-C748-CDBE-0073-A9F91AD16E27</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

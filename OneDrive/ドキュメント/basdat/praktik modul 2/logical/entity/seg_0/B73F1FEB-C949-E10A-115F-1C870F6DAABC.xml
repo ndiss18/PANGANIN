@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B73F1FEB-C949-E10A-115F-1C870F6DAABC" name="tb_e_wallet">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:00:32 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="e_wallet_id" id="8D52B8DF-52C0-F8A1-A8D1-17F36DC6AB18">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:00:52 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="provider" id="6ADE0EA3-B64F-34FD-C8B4-720EBB2858F0">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:01:20 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="phone_number" id="416618FA-C1D1-2455-E8A0-929C06A0E3D1">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 02:01:37 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<engineerTo>
+<item key="C96CBE2D-D028-4CFB-B277-244626575DD0" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

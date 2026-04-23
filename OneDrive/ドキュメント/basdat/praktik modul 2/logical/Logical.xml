@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="5D8609A1-48F5-FBDE-1FC5-A7AE59E56785" mainViewID="D2EB601C-4353-C462-0EEB-2039A4B83C5E">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:45:30 UTC</createdTime>
+<ownerDesignName>praktik modul 2</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>
