@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6B4ABC72-99F4-6DA2-9E2D-7A128344858D" name="vip">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>21646432-BB02-E13D-472F-42FC2E8200D7</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="room_id" id="C8E79E58-E824-A3AD-517F-4B4A9BAA75A2">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>7B8479F2-0BD8-BD24-B1FE-3BA7F65CE8E2</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3EC2DF6B-F089-A2F5-DC6D-2C0056EFA520" referredColumn="68E5DD48-595A-F60B-6FE9-3A9445BB6318"/>
+</associations>
+</Column>
+<Column name="vip_facilities" id="39303671-5F68-ADDC-C880-F7F856840DE8">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>E3B81222-7D49-8E9B-CAC3-6468FE4333EF</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="extra_service" id="0818C1F3-4625-68ED-86F9-049991511EF3">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>633FABA0-5CF2-3078-123B-D7FC3B143127</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="exclusive_access" id="7D1A614C-00DD-1761-6183-9809CE9A6D87">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>09B4006B-21B4-18C5-5B04-0EA5710131EA</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7BC0657-5CA2-5066-DE52-793E6D5E7DA1" name="vip_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>586FE182-5520-3BA5-CBDF-5F103DBAAC86</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8E79E58-E824-A3AD-517F-4B4A9BAA75A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE2B6E3C-D7A2-DD86-BE06-C7384974D3CB" name="vip_PKv1">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>248B2351-463E-BFC6-CEBF-395E00CD89DC</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+</ind_PK_UK>
+<ind_PK_UK id="52770617-9066-9FD1-7C3A-BA042006BA22" name="vip_Room_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>1F9E1C8E-A41A-49AC-1CEB-15B97DB1FD29</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8E79E58-E824-A3AD-517F-4B4A9BAA75A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

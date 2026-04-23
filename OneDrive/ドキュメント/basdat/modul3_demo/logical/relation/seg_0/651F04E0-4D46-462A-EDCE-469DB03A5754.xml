@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_10" directorySegmentName="seg_0" id="651F04E0-4D46-462A-EDCE-469DB03A5754">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-22 16:39:51 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<targetPk>C4B9880B-9DB4-2B76-8C54-CA7D6B828DAC</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0222F7FC-CAEF-161F-C320-3FDBEF4197E2</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>0222F7FC-CAEF-161F-C320-3FDBEF4197E2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

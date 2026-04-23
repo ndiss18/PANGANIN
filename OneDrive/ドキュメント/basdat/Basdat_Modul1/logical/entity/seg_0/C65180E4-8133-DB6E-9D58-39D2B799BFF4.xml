@@ -34,7 +34,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -47,7 +46,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -60,11 +58,12 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="reservation_status" id="6571EBCB-328C-0ECB-1FEC-AA518F22E104">
 <createdBy>NURUN ANIS</createdBy>
@@ -79,14 +78,43 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="guest_id" id="EEC2771E-3863-038F-1774-C04E548DBE16">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-15 04:20:16 UTC</createdTime>
+<generatorID>A84A9848-E348-2A31-7665-037C57AB4616</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>3A1C1D19-0E8E-3EEC-CE2C-274D074040F1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="room_id" id="8FB1A50B-AE7C-7AFE-C63A-4E6DFB6C6D95">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-15 04:21:31 UTC</createdTime>
+<generatorID>B299B9CD-D4D5-6742-B0DB-3ECEC32EAD31</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>7B8479F2-0BD8-BD24-B1FE-3BA7F65CE8E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="A0B6E6A9-E06F-EAB6-9EE5-0218094B209D" name="Reservation PK">
 <createdBy>NURUN ANIS</createdBy>
 <createdTime>2026-04-08 10:31:53 UTC</createdTime>
 <ownerDesignName>Basdat_Modul1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

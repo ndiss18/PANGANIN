@@ -34,7 +34,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -47,7 +46,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -60,7 +58,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT021</logicalDatatype>
@@ -73,10 +70,23 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="room_id" id="6175D8C3-0434-FF7B-7B0C-3A1C83DFB6F8">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 05:50:59 UTC</createdTime>
+<generatorID>60F0A1FC-B4C2-4213-6276-60D4EB2759C7</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>7B8479F2-0BD8-BD24-B1FE-3BA7F65CE8E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -85,8 +95,9 @@
 <createdBy>NURUN ANIS</createdBy>
 <createdTime>2026-04-08 10:45:05 UTC</createdTime>
 <ownerDesignName>Basdat_Modul1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

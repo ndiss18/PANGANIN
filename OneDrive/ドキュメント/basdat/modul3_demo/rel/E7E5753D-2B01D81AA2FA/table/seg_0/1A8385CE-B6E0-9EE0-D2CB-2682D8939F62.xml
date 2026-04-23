@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1A8385CE-B6E0-9EE0-D2CB-2682D8939F62" name="Guest">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>11E18B85-CDF1-7626-4904-4C6B0911F8E4</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="guest_id" id="C7BE6B2A-BB60-E2D8-D092-54AF49BD5B8C">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>3A1C1D19-0E8E-3EEC-CE2C-274D074040F1</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="full_name" id="DC405700-F440-602D-795F-887593D89443">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>2ED7AAC6-B96C-2EF5-B44E-C865A7F07452</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone_number" id="3DE7D637-9957-C074-32ED-2E217A23D562">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>F2D33E7B-1335-2209-9B15-450AAC44AF19</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="3ED7B092-4FCE-4A22-2570-D770A1D454F6">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>EE7C0CED-61CC-0202-6DED-E6F0942640BA</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="F710E132-AC41-C20C-1354-D43FBB0F447F">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>2B9C19B7-2BF5-3F75-3C49-D82523F2106E</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D6FD128D-D9EB-6B88-D586-4F958DA9A4D8" name="Guest_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>A36524B0-BAC1-D28E-DA4A-9E9D217C6E97</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7BE6B2A-BB60-E2D8-D092-54AF49BD5B8C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

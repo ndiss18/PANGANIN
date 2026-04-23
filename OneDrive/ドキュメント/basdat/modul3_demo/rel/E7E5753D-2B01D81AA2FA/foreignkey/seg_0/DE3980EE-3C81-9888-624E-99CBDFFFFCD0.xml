@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DE3980EE-3C81-9888-624E-99CBDFFFFCD0" containerWithKeyObject="A6715212-1A24-E224-2FCC-169DA54B164E" localFKIndex="F217EEEE-6BED-CD52-0540-E44949A4A57B" name="reguler_Room_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>98F6EDA1-3082-3A8D-8401-01B533FF833D</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<referredTableLongName>Room</referredTableLongName>
+<arc>2F79128A-43B3-B724-56AF-18E1C2FCA99B</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>36D4B2D7-0663-1CE6-2D0E-9C7D1B1A3984</referredTableID>
+<keyObject>650DCFE5-29D9-4497-7432-7E318D8CFFB8</keyObject>
+<referredKeyID>650DCFE5-29D9-4497-7432-7E318D8CFFB8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>room_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

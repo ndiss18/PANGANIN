@@ -1,0 +1,125 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C65180E4-8133-DB6E-9D58-39D2B799BFF4" name="Reservation">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:27:34 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="reservation_id" id="44A4C02D-9F33-5C40-E015-02D1C652187C">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:27:43 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="check_in_date" id="404EABF6-6A75-AE2A-1B67-D107D2248A23">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:32:19 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="check_out_date" id="B28D500A-524B-25C1-6677-99C3E9917842">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:32:35 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="total_price" id="932CD627-48DD-0409-9520-F7DD4DB1E697">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:33:07 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="reservation_status" id="6571EBCB-328C-0ECB-1FEC-AA518F22E104">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:34:06 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="guest_id" id="EEC2771E-3863-038F-1774-C04E548DBE16">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-15 04:20:16 UTC</createdTime>
+<generatorID>A84A9848-E348-2A31-7665-037C57AB4616</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>3A1C1D19-0E8E-3EEC-CE2C-274D074040F1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="room_id" id="8FB1A50B-AE7C-7AFE-C63A-4E6DFB6C6D95">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-15 04:21:31 UTC</createdTime>
+<generatorID>B299B9CD-D4D5-6742-B0DB-3ECEC32EAD31</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>7B8479F2-0BD8-BD24-B1FE-3BA7F65CE8E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A0B6E6A9-E06F-EAB6-9EE5-0218094B209D" name="Reservation PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:31:53 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>44A4C02D-9F33-5C40-E015-02D1C652187C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

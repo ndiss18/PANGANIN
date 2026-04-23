@@ -1,0 +1,147 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="36D4B2D7-0663-1CE6-2D0E-9C7D1B1A3984" name="Room">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>8D331E07-65B7-B443-373A-2C71AD66312F</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="room_id" id="68E5DD48-595A-F60B-6FE9-3A9445BB6318">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>7B8479F2-0BD8-BD24-B1FE-3BA7F65CE8E2</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="room_number" id="D2F42FDE-B79C-898A-557A-22113E3FF3D6">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>EAE4D303-C488-7F4F-647E-357504D379AF</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="room_type" id="F21182B8-A448-711D-DF4F-5314404B36CE">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>CC33114C-9813-DBBF-BC6E-C331FC496413</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price_per_night" id="7E4C40F9-51E1-B872-ED0E-B2361A1E96BB">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>20DDEDA0-472E-5A42-57F9-BC9A1A113BAF</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="room_status" id="BE303D8E-3750-1A28-4F78-901890D7E913">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>BFDD7712-C536-9DF5-9E37-96A05DDDF175</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hotel_hotel_id" id="CD3CE7F0-D44E-8033-0096-0C932F7D8946">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>6185C418-AAA6-5C42-2D14-A2E736A436A7</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="09EC8D9B-46D1-567D-3F14-5537019B4884" referredColumn="6828DBAD-CF60-5502-9AC8-67F8A72910C6"/>
+</associations>
+</Column>
+<Column name="Hotel_hotel_id2" id="DD81E2C1-D9DD-665F-813B-E8A9A5396CC7">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 06:01:54 UTC</createdTime>
+<generatorID>111F34F3-576D-775F-77C3-70D6305143E8</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4726F7BB-FAF4-9E03-BAF9-268633AE64A4" referredColumn="6828DBAD-CF60-5502-9AC8-67F8A72910C6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="650DCFE5-29D9-4497-7432-7E318D8CFFB8" name="Room_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>586FE182-5520-3BA5-CBDF-5F103DBAAC86</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68E5DD48-595A-F60B-6FE9-3A9445BB6318"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="59571EA1-3513-CD76-BC70-136871798D63" name="Room__IDX">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 06:01:54 UTC</createdTime>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>60F0A1FC-B4C2-4213-6276-60D4EB2759C7</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="DD81E2C1-D9DD-665F-813B-E8A9A5396CC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="422163E8-4FD5-E450-2A23-1E2003479594" name="Room_Hotel_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:54 UTC</createdTime>
+<generatorID>0CD21545-5558-C089-DE47-6A21A56B4C75</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD3CE7F0-D44E-8033-0096-0C932F7D8946"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DDF59959-A5C2-6BD5-5D59-2F194398278B" name="Room_Hotel_FKv2">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 06:01:54 UTC</createdTime>
+<generatorID>60F0A1FC-B4C2-4213-6276-60D4EB2759C7</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD81E2C1-D9DD-665F-813B-E8A9A5396CC7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

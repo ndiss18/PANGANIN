@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A6715212-1A24-E224-2FCC-169DA54B164E" name="reguler">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>5EF211B0-44EB-C8AC-1E86-DAADAAC7FD2B</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="room_id" id="AD8E8104-E97E-17FF-3719-4BE6B5CF6A02">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>7B8479F2-0BD8-BD24-B1FE-3BA7F65CE8E2</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DE3980EE-3C81-9888-624E-99CBDFFFFCD0" referredColumn="68E5DD48-595A-F60B-6FE9-3A9445BB6318"/>
+</associations>
+</Column>
+<Column name="standard_facilities" id="2366B8F5-1A4D-A337-81D6-85A887A18885">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>2F6211EC-E9C8-888C-1A0D-853CB4CF9447</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bed_type" id="B7167091-788D-D65D-DAE3-10B837BDBEBB">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>CF179C52-E9E8-9D08-DF4B-82683E267011</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="room_size" id="CF7F471C-130F-A6FF-F3E0-63D34512FED8">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>CEEEF896-ABBB-4B1C-48C7-CF4D49F315F5</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C24E7B6-C563-682A-0798-F64C359A902F" name="reguler_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>586FE182-5520-3BA5-CBDF-5F103DBAAC86</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD8E8104-E97E-17FF-3719-4BE6B5CF6A02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F217EEEE-6BED-CD52-0540-E44949A4A57B" name="reguler_Room_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>98F6EDA1-3082-3A8D-8401-01B533FF833D</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD8E8104-E97E-17FF-3719-4BE6B5CF6A02"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="2AE260F2-39CB-B555-15CE-37714E16E0CC">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:08:49 UTC</createdTime>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

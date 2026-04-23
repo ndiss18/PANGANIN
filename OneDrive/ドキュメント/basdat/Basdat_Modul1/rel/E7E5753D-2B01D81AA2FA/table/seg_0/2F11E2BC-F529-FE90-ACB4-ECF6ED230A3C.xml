@@ -1,0 +1,136 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2F11E2BC-F529-FE90-ACB4-ECF6ED230A3C" name="Reservation">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>C65180E4-8133-DB6E-9D58-39D2B799BFF4</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="reservation_id" id="FCB6632E-43E7-8937-BDDE-A0602485DCF6">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>44A4C02D-9F33-5C40-E015-02D1C652187C</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="check_in_date" id="5DC4B887-E146-CAA8-14D6-9A9BBCFF1601">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>404EABF6-6A75-AE2A-1B67-D107D2248A23</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="check_out_date" id="1E187E24-3A4A-95CC-381C-B4AEADC11F2F">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>B28D500A-524B-25C1-6677-99C3E9917842</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="total_price" id="1F6E49FF-9A63-EB2F-6FE9-817DC4871FB6">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>932CD627-48DD-0409-9520-F7DD4DB1E697</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT026</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reservation_status" id="B785ECE5-6800-7982-3E29-2BF7C74DD9BA">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>6571EBCB-328C-0ECB-1FEC-AA518F22E104</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Guest_guest_id" id="E3D82AC3-9CD8-110E-D949-B267BF8FDD31">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>EEC2771E-3863-038F-1774-C04E548DBE16</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ED96B088-F3B9-4B52-254F-63AA1C4652E0" referredColumn="C7BE6B2A-BB60-E2D8-D092-54AF49BD5B8C"/>
+</associations>
+</Column>
+<Column name="Room_room_id" id="7BF80E11-34FA-ACE7-CD0E-0E837C46AEDD">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>8FB1A50B-AE7C-7AFE-C63A-4E6DFB6C6D95</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A11E2AA3-A854-A325-A1DF-4F923842BED3" referredColumn="68E5DD48-595A-F60B-6FE9-3A9445BB6318"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BFE7ACA3-6F0A-E42C-EC65-2BCB75D3CE60" name="Reservation_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>A0B6E6A9-E06F-EAB6-9EE5-0218094B209D</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCB6632E-43E7-8937-BDDE-A0602485DCF6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="234EC7CE-A30E-5D2A-8851-BFFEF713764A" name="Reservation_Guest_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:53 UTC</createdTime>
+<generatorID>A84A9848-E348-2A31-7665-037C57AB4616</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E3D82AC3-9CD8-110E-D949-B267BF8FDD31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="081EBF03-7AD8-4392-D14C-CB40340F66DC" name="Reservation_Room_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 03:30:54 UTC</createdTime>
+<generatorID>B299B9CD-D4D5-6742-B0DB-3ECEC32EAD31</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7BF80E11-34FA-ACE7-CD0E-0E837C46AEDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

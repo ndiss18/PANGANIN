@@ -34,7 +34,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -48,7 +47,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -62,7 +60,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
@@ -75,12 +72,25 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>10</dataTypeSize>
 <ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="hotel_id" id="111F34F3-576D-775F-77C3-70D6305143E8">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-16 05:51:07 UTC</createdTime>
+<generatorID>60F0A1FC-B4C2-4213-6276-60D4EB2759C7</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>F9CFF147-1C77-5B06-A6A3-001579B116C1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -88,8 +98,9 @@
 <createdBy>NURUN ANIS</createdBy>
 <createdTime>2026-04-08 10:21:28 UTC</createdTime>
 <ownerDesignName>Basdat_Modul1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

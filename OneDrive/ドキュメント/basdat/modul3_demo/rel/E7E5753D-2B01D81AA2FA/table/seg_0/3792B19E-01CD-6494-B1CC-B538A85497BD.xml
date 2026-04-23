@@ -1,0 +1,156 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3792B19E-01CD-6494-B1CC-B538A85497BD" name="bank">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>E5DF2445-CFF2-AF37-D838-9810A394D818</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Payment_payment_id" id="44107012-48A9-F2FB-D916-3A7AD2AA39B7">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>925810E0-7DEC-3B6A-30C3-371FE2B20DA0</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AEEE0D05-EA42-2A8A-EF12-EBE633FF4E44" referredColumn="FE308499-6119-7035-1105-966885FDF20E"/>
+</associations>
+</Column>
+<Column name="id_bank" id="D9543F4A-54C6-E85D-E9E0-5A727E21CAD4">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>6EC01831-44EB-7EBB-C8F4-432AF85E482B</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nama_bank" id="F5D19267-B0F8-4E66-BB6B-1DB5D8780B04">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>C3696314-318C-A64C-0D67-C3F5C10151DD</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_pembayaran" id="826DE51E-B797-8838-27D5-21593F089E79">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>4EE29E76-181E-CEE5-5E15-D8E37C71879C</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tanggal_transfer" id="1C206F56-49E0-C604-5F2B-BD2D5B4A4F40">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>AC4AD465-0E66-30A2-6EEB-A497F7B4ABEE</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reservation_id" id="1ECDAA60-7387-1714-82EB-2446D35AC724">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:11:20 UTC</createdTime>
+<generatorID>DC98284F-4EE5-1B37-4679-9991C7876594</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_payment" id="0B5B076C-C6C1-57C3-E22D-60E5604FBBA2">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:12:47 UTC</createdTime>
+<generatorID>D76127D8-9AD1-9418-E855-ABCB01CF00EA</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_payment2" id="A71C3B6D-0B82-D434-ADA2-6209D04EC447">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:14:49 UTC</createdTime>
+<generatorID>F10B00A3-DEDE-03BD-05E7-6658E53B1988</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reservation_id1" id="0E48CF42-2DF4-F34C-F763-545332FCA136">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:23:12 UTC</createdTime>
+<generatorID>AC5E76B0-DDB8-71C6-8114-6698F49CE0E1</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9FDB2851-D11B-18E1-42ED-13C28CD741C5" name="bank_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>38856785-D499-9FF3-7A3C-708DCAD537C0</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D9543F4A-54C6-E85D-E9E0-5A727E21CAD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DCD184D5-298F-CE1E-576E-45237D5B8365" name="bank__IDX">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>C3ECB97C-64BF-9776-402C-22067F36F371</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="44107012-48A9-F2FB-D916-3A7AD2AA39B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="972350BB-7DB2-AA5F-E125-5B42FCD36DA4" name="bank_Payment_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>C3ECB97C-64BF-9776-402C-22067F36F371</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="44107012-48A9-F2FB-D916-3A7AD2AA39B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

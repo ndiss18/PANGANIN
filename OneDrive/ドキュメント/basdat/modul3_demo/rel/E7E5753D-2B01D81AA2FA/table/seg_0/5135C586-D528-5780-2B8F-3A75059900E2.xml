@@ -1,0 +1,156 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5135C586-D528-5780-2B8F-3A75059900E2" name="ewallet">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>6EBB268F-6A57-046A-DD44-AD157DB2AF96</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Payment_payment_id" id="85E9169F-B92F-006A-5C65-8D958856266F">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>05AD7D8A-D58C-8188-B909-B4EF5787D648</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D224A487-ED81-3188-A228-9A25378F403F" referredColumn="FE308499-6119-7035-1105-966885FDF20E"/>
+</associations>
+</Column>
+<Column name="id_eWallet" id="EC86D065-5053-2139-6F9E-3B2D934E600F">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>CF514F39-086B-522A-624E-4EBB06791110</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="jenis_eWallet" id="FBCD50A3-2170-1CEF-0508-BF57F1D78327">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>109B6181-27D2-56F9-8DA6-63C87E470FA3</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status_pembayaran" id="21878412-0D21-0023-4488-60D0A7F685AB">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>52D3E44C-8625-8694-6174-5E49C5DF169F</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tanggal_pembayaran" id="DC2AF8A6-605A-6607-BDC9-D663788F379F">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>CD8DBE51-DA0B-91EF-28FD-7C8C141C8C9C</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reservation_id" id="0FF31071-78BA-6B84-FAF5-8F81C98E1A14">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:11:20 UTC</createdTime>
+<generatorID>CB7A6A29-CD07-0262-3C0F-C6014634FCF1</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_payment" id="ED3F8D16-CB9E-AE6B-C9EC-A043C19070D2">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:12:47 UTC</createdTime>
+<generatorID>9E2D0957-4063-FA12-A34B-2DE6183247F5</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_payment2" id="72D2BC3C-4F72-F684-4289-703510540307">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:14:49 UTC</createdTime>
+<generatorID>727D201F-33EB-5D78-0E3E-2C4C7C841EA9</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="reservation_id1" id="283248D5-6317-4E24-A518-5B4336F95F4F">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 01:23:12 UTC</createdTime>
+<generatorID>9E13A5A0-346C-E5C4-68A7-1E43587F46C1</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="736B9898-BE4B-7EEC-6CDD-0E064D45E49C" name="ewallet_PK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>3CAA5C7A-90DD-0DA3-7751-0B63B85FCD62</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC86D065-5053-2139-6F9E-3B2D934E600F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A26E3703-41A1-9F75-C0C2-34831DE46964" name="ewallet__IDX">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>8CBFF707-C04E-27AF-E05F-0F9487585FF5</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="85E9169F-B92F-006A-5C65-8D958856266F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98E988FB-823E-61FC-7B63-7F2DC65ED6D6" name="ewallet_Payment_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>8CBFF707-C04E-27AF-E05F-0F9487585FF5</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85E9169F-B92F-006A-5C65-8D958856266F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

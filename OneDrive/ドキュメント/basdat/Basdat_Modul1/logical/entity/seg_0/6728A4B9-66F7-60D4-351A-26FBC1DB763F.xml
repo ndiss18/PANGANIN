@@ -34,7 +34,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
@@ -47,11 +46,12 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT026</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
 <Attribute name="payment_method" id="40287DEF-F7AF-6D95-A0C7-1BB69FBD3700">
 <createdBy>NURUN ANIS</createdBy>
@@ -79,14 +79,29 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="reservation_id" id="7F937C13-01BF-489F-43EA-426A871AC334">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-15 04:24:01 UTC</createdTime>
+<generatorID>DA47DBB0-9E02-7345-AA4D-C10512F647E9</generatorID>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<referedAttribute>44A4C02D-9F33-5C40-E015-02D1C652187C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="7D2F93DA-0E7C-4F56-3255-97EF14A83114" name="Payment PK">
 <createdBy>NURUN ANIS</createdBy>
 <createdTime>2026-04-08 10:36:22 UTC</createdTime>
 <ownerDesignName>Basdat_Modul1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

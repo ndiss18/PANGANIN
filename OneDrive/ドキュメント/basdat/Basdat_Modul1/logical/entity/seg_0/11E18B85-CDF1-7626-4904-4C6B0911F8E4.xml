@@ -34,21 +34,6 @@
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>10</dataTypeSize>
-<ownDataTypeParameters>10,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="email" id="EE7C0CED-61CC-0202-6DED-E6F0942640BA">
-<createdBy>NURUN ANIS</createdBy>
-<createdTime>2026-04-08 10:18:22 UTC</createdTime>
-<ownerDesignName>Basdat_Modul1</ownerDesignName>
-<engineerTo>
-<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -58,6 +43,19 @@
 <Attribute name="phone_number" id="F2D33E7B-1335-2209-9B15-450AAC44AF19">
 <createdBy>NURUN ANIS</createdBy>
 <createdTime>2026-04-08 10:18:52 UTC</createdTime>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<engineerTo>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="EE7C0CED-61CC-0202-6DED-E6F0942640BA">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:18:22 UTC</createdTime>
 <ownerDesignName>Basdat_Modul1</ownerDesignName>
 <engineerTo>
 <item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
@@ -89,8 +87,9 @@
 <createdBy>NURUN ANIS</createdBy>
 <createdTime>2026-04-08 10:17:03 UTC</createdTime>
 <ownerDesignName>Basdat_Modul1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="true"/>
+<item key="E7E5753D-22EF-ACFA-5BF4-2B01D81AA2FA" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

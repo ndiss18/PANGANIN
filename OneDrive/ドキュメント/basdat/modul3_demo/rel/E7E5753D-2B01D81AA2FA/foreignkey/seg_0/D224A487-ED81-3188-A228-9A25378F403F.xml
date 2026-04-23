@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D224A487-ED81-3188-A228-9A25378F403F" containerWithKeyObject="5135C586-D528-5780-2B8F-3A75059900E2" localFKIndex="98E988FB-823E-61FC-7B63-7F2DC65ED6D6" name="ewallet_Payment_FK">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-23 00:11:22 UTC</createdTime>
+<generatorID>8CBFF707-C04E-27AF-E05F-0F9487585FF5</generatorID>
+<ownerDesignName>modul3_demo</ownerDesignName>
+<referredTableLongName>Payment</referredTableLongName>
+<arc>B257B78A-C004-21A6-78DB-27367E8DD761</arc>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>19CDD784-5B78-F237-8472-77CC202F25D6</referredTableID>
+<keyObject>84C6CA4D-1985-510E-1B84-7C9F8ADA9CB9</keyObject>
+<referredKeyID>84C6CA4D-1985-510E-1B84-7C9F8ADA9CB9</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>payment_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

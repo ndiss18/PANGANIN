@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modul 2" id="04C704AF-2EB6-8610-D3D5-472297141F34" version="3.5">
+<createdBy>NURUN ANIS</createdBy>
+<createdTime>2026-04-08 10:08:48 UTC</createdTime>
+<ownerDesignName>Basdat_Modul1</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>04C704AF-2EB6-8610-D3D5-472297141F34</designId>
+</OSDM_Design>
