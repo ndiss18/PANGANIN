@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panganin - Pesan Makanan Kantin Tanpa Antre</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Utama -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       1. HEADER & NAVIGASI
+       ======================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Logo Brand -->
+      <a href="#home" class="brand">
+        <div class="brand-icon">🍲</div>
+        <div class="brand-info">
+          <span class="brand-name">Panganin</span>
+          <span class="brand-tagline">Pesan makanan tanpa antre</span>
+        </div>
+      </a>
+
+      <!-- Menu Navigasi -->
+      <nav class="site-nav" aria-label="Navigasi Utama">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#menu" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="#keranjang" class="nav-link nav-cart-btn">
+              <span>Keranjang</span>
+              <span id="nav-cart-badge" class="cart-badge">0</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#pesanan" class="nav-link">Pesanan Saya</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         2. HERO SECTION
+         ======================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <!-- Teks Hero -->
+        <div class="hero-content">
+          <span class="hero-pill">⚡ Solusi Bebas Antre Mahasiswa</span>
+          <h1 class="hero-title">Laper? Pesan di <span class="highlight-text">Panganin!</span></h1>
+          <p class="hero-description">
+            Nikmati waktu istirahat kuliahmu tanpa repot berdesakan di kantin. 
+            Pilih menu favorit, pesan langsung, dan ambil ketika pesanan sudah siap.
+          </p>
+          <div class="hero-action-group">
+            <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+            <a href="#pesanan" class="btn btn-secondary">Cek Pesanan Saya</a>
+          </div>
+
+          <!-- Fitur Singkat -->
+          <div class="hero-features">
+            <div class="feature-item">
+              <span class="feature-icon">⏱️</span>
+              <div>
+                <strong>Bebas Antre</strong>
+                <p>Hemat waktu istirahat</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">🔔</span>
+              <div>
+                <strong>Pantau Status</strong>
+                <p>Ketahui proses makanan</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">💳</span>
+              <div>
+                <strong>Mudah & Praktis</strong>
+                <p>Bayar saat ambil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banner Visual Hero -->
+        <div class="hero-visual">
+          <div class="hero-card-preview">
+            <div class="preview-badge">🔥 Rekomendasi Hari Ini</div>
+            <img 
+              src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=700&q=80" 
+              alt="Ayam Geprek Spesial Kantin" 
+              class="preview-img"
+            >
+            <div class="preview-info">
+              <div>
+                <h3 class="preview-name">Ayam Geprek Sambal Bawang</h3>
+                <p class="preview-chef">Stand Mas Joko • Kantin Barat</p>
+              </div>
+              <span class="preview-price">Rp18.000</span>
+            </div>
+            <div class="preview-status-pill">
+              <span class="status-dot"></span> Waktu masak rata-rata 8 menit
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         3. MENU KANTIN SECTION
+         ======================================================== -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <!-- Judul Bagian Menu -->
+        <div class="section-header">
+          <span class="section-tag">Daftar Pilihan</span>
+          <h2 class="section-title">Menu Kantin Kampus</h2>
+          <p class="section-subtitle">
+            Pilihan hidangan lezat dan minuman segar dengan harga terjangkau untuk mahasiswa.
+          </p>
+        </div>
+
+        <!-- Filter Kategori Menu -->
+        <div class="menu-filter-bar">
+          <button type="button" class="filter-btn active" data-category="all">Semua Menu</button>
+          <button type="button" class="filter-btn" data-category="makanan">Makanan</button>
+          <button type="button" class="filter-btn" data-category="minuman">Minuman</button>
+          <button type="button" class="filter-btn" data-category="camilan">Camilan</button>
+        </div>
+
+        <!-- Container Grid Kartu Menu (Dirender oleh script.js) -->
+        <div id="menu-grid" class="menu-grid">
+          <!-- Item menu akan digenerate secara otomatis oleh JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. KERANJANG & CHECKOUT SECTION
+         ======================================================== -->
+    <section id="keranjang" class="cart-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Konfirmasi Pesanan</span>
+          <h2 class="section-title">Keranjang & Checkout</h2>
+          <p class="section-subtitle">
+            Kelola porsi makananmu dan lengkapi data pemesanan untuk langsung diproses kantin.
+          </p>
+        </div>
+
+        <div class="cart-checkout-layout">
+          <!-- Sisi Kiri: Daftar Keranjang Makanan -->
+          <div class="cart-box">
+            <div class="cart-box-header">
+              <h3 class="box-title">Daftar Item Terpilih</h3>
+              <button type="button" id="btn-clear-cart" class="btn-text-danger" title="Kosongkan seluruh isi keranjang">
+                🗑️ Kosongkan
+              </button>
+            </div>
+
+            <!-- Tampilan Jika Keranjang Kosong -->
+            <div id="cart-empty-state" class="cart-empty-state">
+              <div class="empty-icon">🛒</div>
+              <h4>Keranjangmu masih kosong</h4>
+              <p>Yuk pilih santapan favoritmu di bagian menu di atas!</p>
+              <a href="#menu" class="btn btn-secondary btn-sm">Mulai Pilih Menu</a>
+            </div>
+
+            <!-- Kontainer Daftar Item Keranjang -->
+            <div id="cart-items-container" class="cart-items-container hidden">
+              <div class="cart-table-wrapper">
+                <table class="cart-table">
+                  <thead>
+                    <tr>
+                      <th>Menu</th>
+                      <th>Harga</th>
+                      <th class="text-center">Jumlah</th>
+                      <th class="text-right">Subtotal</th>
+                      <th class="text-center">Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cart-table-body">
+                    <!-- Baris item keranjang dirender dinamis di sini -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sisi Kanan: Form Pemesanan & Ringkasan Checkout -->
+          <aside class="checkout-box">
+            <h3 class="box-title">Form Pemesanan Mahasiswa</h3>
+            
+            <!-- Pesan Notifikasi Validasi Form -->
+            <div id="checkout-error" class="alert-box alert-danger hidden"></div>
+
+            <form id="checkout-form" class="checkout-form" novalidate>
+              <div class="form-group">
+                <label for="student-name" class="form-label">Nama Mahasiswa <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="student-name" 
+                  class="form-input" 
+                  placeholder="Contoh: Dimas Aditya" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="student-nim" class="form-label">NIM (Nomor Induk Mahasiswa) <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="student-nim" 
+                  class="form-input" 
+                  placeholder="Contoh: 21120120140001" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="pickup-location" class="form-label">Nomor Meja / Lokasi Pengambilan <span class="required">*</span></label>
+                <input 
+                  type="text" 
+                  id="pickup-location" 
+                  class="form-input" 
+                  placeholder="Contoh: Meja 14 (Kantin Pusat) / Ambil Langsung" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="order-notes" class="form-label">Catatan Tambahan (Opsional)</label>
+                <textarea 
+                  id="order-notes" 
+                  class="form-input form-textarea" 
+                  rows="2" 
+                  placeholder="Contoh: Sambal dipisah, jangan pakai seledri, dsb."
+                ></textarea>
+              </div>
+
+              <!-- Rincian Biaya -->
+              <div class="checkout-summary">
+                <div class="summary-line">
+                  <span>Total Item</span>
+                  <span id="summary-total-items" class="fw-bold">0 item</span>
+                </div>
+                <div class="summary-line">
+                  <span>Biaya Layanan</span>
+                  <span class="badge-free">Gratis</span>
+                </div>
+                <div class="summary-line total-line">
+                  <span class="total-label">Total Pembayaran</span>
+                  <span id="summary-total-price" class="total-price">Rp0</span>
+                </div>
+              </div>
+
+              <!-- Tombol Checkout -->
+              <button type="submit" id="btn-submit-order" class="btn btn-primary btn-block btn-lg">
+                Pesan Sekarang
+              </button>
+              <p class="form-hint">
+                🔒 Pembayaran dapat dilakukan via QRIS atau Tunai di kasir stand saat pesanan siap diambil.
+              </p>
+            </form>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. STATUS PESANAN (PESANAN SAYA) SECTION
+         ======================================================== -->
+    <section id="pesanan" class="orders-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Lacak Pesanan</span>
+          <h2 class="section-title">Status Pesanan Saya</h2>
+          <p class="section-subtitle">
+            Pantau tahapan makananmu mulai dari diterima hingga siap diambil tanpa antre.
+          </p>
+        </div>
+
+        <!-- Tampilan Saat Belum Ada Pesanan -->
+        <div id="orders-empty-state" class="orders-empty-state">
+          <div class="empty-icon">📋</div>
+          <h3>Belum Ada Pesanan Aktif</h3>
+          <p>Kamu belum memiliki pesanan saat ini. Pilih menu favoritmu sekarang dan buat pesanan pertamamu!</p>
+          <a href="#menu" class="btn btn-primary">Pesan Makanan Sekarang</a>
+        </div>
+
+        <!-- Kontainer Kartu Pesanan Aktif (Dirender oleh script.js) -->
+        <div id="orders-list-container" class="orders-list-container hidden">
+          <!-- Kartu pesanan akan di-render di sini oleh JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       6. FOOTER
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <!-- Kolom Brand -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <span class="footer-logo-icon">🍲</span>
+          <span class="footer-logo-title">Panganin</span>
+        </div>
+        <p class="footer-desc">
+          Platform pemesanan makanan kantin kampus modern yang memudahkan mahasiswa dan dosen menikmati hidangan hangat tanpa antre berdesakan.
+        </p>
+      </div>
+
+      <!-- Kolom Navigasi -->
+      <div class="footer-col links-col">
+        <h4 class="footer-heading">Navigasi</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Daftar Menu</a></li>
+          <li><a href="#keranjang">Keranjang & Checkout</a></li>
+          <li><a href="#pesanan">Pesanan Saya</a></li>
+        </ul>
+      </div>
+
+      <!-- Kolom Layanan Kantin -->
+      <div class="footer-col info-col">
+        <h4 class="footer-heading">Layanan Kantin</h4>
+        <ul class="footer-info-list">
+          <li>📍 Kantin Pusat & Kantin Barat Kampus</li>
+          <li>⏰ Jam Buka: 07.30 - 17.00 WIB (Senin - Jumat)</li>
+          <li>💬 Layanan Bantuan: support@panganin.ac.id</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Garis Hak Cipta -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <p>&copy; 2026 Panganin. Hak Cipta Dilindungi.</p>
+        <p class="footer-credit">Dibuat khusus untuk kenyamanan kuliner mahasiswa kampus.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container untuk Feedback Visual -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- JavaScript Utama -->
+  <script src="script.js"></script>
+</body>
+</html>
