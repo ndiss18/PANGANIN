@@ -69,25 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // Daftar tahapan status pesanan
-  const ORDER_STATUS_STEPS = [
-    {
-      name: 'Pesanan Diterima',
-      desc: 'Pesanan sudah masuk ke sistem dan dikonfirmasi kantin.',
-      badgeText: 'Diterima'
-    },
-    {
-      name: 'Sedang Diproses',
-      desc: 'Makanan dan minuman sedang dimasak oleh penjual.',
-      badgeText: 'Diproses'
-    },
-    {
-      name: 'Siap Diambil',
-      desc: 'Silakan ambil di stand kantin dengan menunjukkan ID Pesanan.',
-      badgeText: 'Siap Diambil'
-    }
-  ];
-
   /* ------------------------------------------------------
      2. STATE MANAGEMENT (LOCAL STORAGE)
      ------------------------------------------------------ */
@@ -128,11 +109,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const toast = document.createElement('div');
     toast.className = `toast toast-${type}`;
 
-    let icon = '🔔';
-    if (type === 'success') icon = '✅';
-    if (type === 'danger') icon = '⚠️';
+    const icon = type === 'success'
+      ? '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      : type === 'danger'
+        ? '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 2.8 19h18.4L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 9v4m0 3h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>'
+        : '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v5m0-8h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>';
 
-    toast.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+    toast.innerHTML = `<span class="toast-icon">${icon}</span><span>${message}</span>`;
     container.appendChild(toast);
 
     // Animasi muncul
@@ -194,7 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="card-footer">
             <span class="price-tag">${formatRupiah(item.price)}</span>
             <button type="button" class="btn btn-sm btn-primary btn-add-menu" data-id="${item.id}">
-              + Tambah
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Tambah
             </button>
           </div>
         </div>
@@ -356,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <td class="text-right subtotal-price">${formatRupiah(subtotal)}</td>
           <td class="text-center">
             <button type="button" class="btn-delete-item" data-id="${item.id}" title="Hapus makanan ini">
-              🗑️
+              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
           </td>
         `;
@@ -415,24 +399,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // 1. Validasi isi keranjang
       if (cart.length === 0) {
-        showCheckoutError('⚠️ Keranjangmu masih kosong! Silakan tambahkan menu sebelum memesan.');
+        showCheckoutError('Keranjangmu masih kosong. Silakan tambahkan menu sebelum memesan.');
         showToast('Keranjang masih kosong!', 'danger');
         return;
       }
 
       // 2. Ambil nilai input
       const inputName = document.getElementById('student-name');
-      const inputNim = document.getElementById('student-nim');
       const inputLocation = document.getElementById('pickup-location');
       const inputNotes = document.getElementById('order-notes');
 
       const name = inputName ? inputName.value.trim() : '';
-      const nim = inputNim ? inputNim.value.trim() : '';
       const location = inputLocation ? inputLocation.value.trim() : '';
       const notes = inputNotes ? inputNotes.value.trim() : '';
 
       // Reset border invalid
-      [inputName, inputNim, inputLocation].forEach(input => {
+      [inputName, inputLocation].forEach(input => {
         if (input) input.classList.remove('is-invalid');
       });
 
@@ -444,10 +426,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (inputName) inputName.classList.add('is-invalid');
         hasError = true;
         errorMsg = 'Mohon isi Nama Mahasiswa.';
-      } else if (!nim) {
-        if (inputNim) inputNim.classList.add('is-invalid');
-        hasError = true;
-        errorMsg = 'Mohon isi NIM (Nomor Induk Mahasiswa).';
       } else if (!location) {
         if (inputLocation) inputLocation.classList.add('is-invalid');
         hasError = true;
@@ -455,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (hasError) {
-        showCheckoutError(`⚠️ ${errorMsg}`);
+        showCheckoutError(errorMsg);
         return;
       }
 
@@ -479,16 +457,14 @@ document.addEventListener('DOMContentLoaded', () => {
         createdAt: timeString,
         student: {
           name: name,
-          nim: nim,
           location: location,
           notes: notes
         },
         items: [...cart], // salinan item saat checkout
-        totalPrice: totalPrice,
-        statusIndex: 0 // Awal: 0 = Pesanan Diterima
+        totalPrice: totalPrice
       };
 
-      // Tambahkan ke urutan paling depan array orders
+      // Simpan pesanan terbaru di awal riwayat
       orders.unshift(newOrder);
       saveToLocalStorage('panganin_orders', orders);
 
@@ -498,101 +474,48 @@ document.addEventListener('DOMContentLoaded', () => {
       renderCart();
       checkoutForm.reset();
 
-      // 7. Render Ulang Pesanan Saya & Arahkan Tampilan
-      renderOrders();
+      // 7. Perbarui riwayat pesanan
+      renderOrderHistory();
       showToast(`Pesanan ${orderNumber} berhasil dibuat!`, 'success');
 
-      // Scroll mulus ke bagian Pesanan Saya
-      const ordersSection = document.getElementById('pesanan');
-      if (ordersSection) {
-        ordersSection.scrollIntoView({ behavior: 'smooth' });
+      // Arahkan ke riwayat setelah checkout berhasil
+      const orderHistorySection = document.getElementById('riwayat-pesanan');
+      if (orderHistorySection) {
+        orderHistorySection.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }
 
   /* ------------------------------------------------------
-     7. STATUS PESANAN (PESANAN SAYA) & SIMULASI DEMO
+     7. RIWAYAT PESANAN
      ------------------------------------------------------ */
-  const ordersEmptyState = document.getElementById('orders-empty-state');
-  const ordersListContainer = document.getElementById('orders-list-container');
+  const orderHistoryEmpty = document.getElementById('order-history-empty');
+  const orderHistoryList = document.getElementById('order-history-list');
 
-  // Mengubah status pesanan secara bertahap (Demo)
-  function advanceOrderStatus(orderId) {
-    const order = orders.find(o => o.id === orderId);
-    if (!order) return;
-
-    order.statusIndex = (order.statusIndex + 1) % ORDER_STATUS_STEPS.length;
-    saveToLocalStorage('panganin_orders', orders);
-    renderOrders();
-    showToast(`Status ${order.orderNumber} diubah ke: ${ORDER_STATUS_STEPS[order.statusIndex].name}`, 'info');
-  }
-
-  // Mengubah status pesanan secara spesifik (Demo)
-  function setOrderStatus(orderId, targetIndex) {
-    const order = orders.find(o => o.id === orderId);
-    if (!order) return;
-
-    order.statusIndex = targetIndex;
-    saveToLocalStorage('panganin_orders', orders);
-    renderOrders();
-    showToast(`Status ${order.orderNumber} diubah ke: ${ORDER_STATUS_STEPS[order.statusIndex].name}`, 'info');
-  }
-
-  // Menghapus riwayat pesanan tertentu (Demo)
   function deleteOrder(orderId) {
     if (!confirm('Hapus riwayat pesanan ini?')) return;
     orders = orders.filter(o => o.id !== orderId);
     saveToLocalStorage('panganin_orders', orders);
-    renderOrders();
+    renderOrderHistory();
     showToast('Pesanan telah dihapus dari daftar.', 'info');
   }
 
-  // Render Daftar Status Pesanan
-  function renderOrders() {
-    if (!ordersEmptyState || !ordersListContainer) return;
+  function renderOrderHistory() {
+    if (!orderHistoryEmpty || !orderHistoryList) return;
 
     if (orders.length === 0) {
-      ordersEmptyState.classList.remove('hidden');
-      ordersListContainer.classList.add('hidden');
+      orderHistoryEmpty.classList.remove('hidden');
+      orderHistoryList.classList.add('hidden');
       return;
     }
 
-    ordersEmptyState.classList.add('hidden');
-    ordersListContainer.classList.remove('hidden');
-    ordersListContainer.innerHTML = '';
+    orderHistoryEmpty.classList.add('hidden');
+    orderHistoryList.classList.remove('hidden');
+    orderHistoryList.innerHTML = '';
 
     orders.forEach(order => {
       const orderCard = document.createElement('article');
-      orderCard.className = 'order-card';
-
-      // Buat Stepper HTML
-      let stepperHtml = '<ol class="order-stepper">';
-      ORDER_STATUS_STEPS.forEach((step, idx) => {
-        let stepStateClass = 'pending';
-        let indicatorContent = idx + 1;
-        let badgeHtml = `<span class="step-badge badge-pending">Menunggu</span>`;
-
-        if (idx < order.statusIndex) {
-          stepStateClass = 'completed';
-          indicatorContent = '✓';
-          badgeHtml = `<span class="step-badge badge-success">Selesai</span>`;
-        } else if (idx === order.statusIndex) {
-          stepStateClass = 'current';
-          badgeHtml = `<span class="step-badge badge-primary">Aktif</span>`;
-        }
-
-        stepperHtml += `
-          <li class="stepper-step ${stepStateClass}">
-            <div class="step-indicator">${indicatorContent}</div>
-            <div class="step-details">
-              <h4 class="step-title">${step.name}</h4>
-              <p class="step-desc">${step.desc}</p>
-              ${badgeHtml}
-            </div>
-          </li>
-        `;
-      });
-      stepperHtml += '</ol>';
+      orderCard.className = 'order-history-card';
 
       // Rincian Item Pesanan
       let itemsListHtml = '';
@@ -605,87 +528,44 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       });
 
-      // Tombol Kontrol Demo Status
-      let demoButtonsHtml = `
-        <div class="demo-control-panel">
-          <div class="demo-control-info">
-            <span>🕹️ Simulasi Status (Demo):</span>
-          </div>
-          <div class="demo-control-actions">
-            ${ORDER_STATUS_STEPS.map((step, idx) => `
-              <button 
-                type="button" 
-                class="demo-step-btn ${idx === order.statusIndex ? 'active' : ''}" 
-                data-order-id="${order.id}" 
-                data-step-index="${idx}">
-                ${step.badgeText}
-              </button>
-            `).join('')}
-            <button 
-              type="button" 
-              class="btn-next-status" 
-              data-order-id="${order.id}">
-              Lanjut Status ⏩
-            </button>
-            <button 
-              type="button" 
-              class="btn-text-danger" 
-              data-order-delete-id="${order.id}"
-              title="Hapus pesanan ini">
-              Hapus
-            </button>
-          </div>
-        </div>
-      `;
-
       orderCard.innerHTML = `
         <div class="order-card-header">
           <div>
             <div class="order-meta-title">
               <span class="order-number">${order.orderNumber}</span>
-              <span class="order-customer-chip">📍 ${order.student.location}</span>
             </div>
-            <p class="order-timestamp">Dipesan pada ${order.createdAt} • Pemesan: <strong>${order.student.name}</strong> (NIM: ${order.student.nim})</p>
+            <p class="order-timestamp">Dipesan pada ${order.createdAt} • Pemesan: <strong>${order.student.name}</strong></p>
+            <p class="order-location">Lokasi pengambilan: ${order.student.location}</p>
           </div>
           <div>
-            <span class="total-label">Total: </span>
+            <span class="total-label">Total Pembayaran: </span>
             <span class="total-price">${formatRupiah(order.totalPrice)}</span>
           </div>
         </div>
 
-        ${stepperHtml}
-
         <div class="order-details-box">
-          <h5 class="order-details-title">Detail Hidangan:</h5>
+          <h5 class="order-details-title">Detail Pesanan:</h5>
           <div class="order-items-mini-list">
             ${itemsListHtml}
           </div>
-          ${order.student.notes ? `<div class="order-notes-tag">📝 Catatan: "${order.student.notes}"</div>` : ''}
+          ${order.student.notes ? `<div class="order-notes-tag"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m14 4 6 6M4 20l4.3-.9L19 8.4 15.6 5 4.9 15.7 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Catatan: "${order.student.notes}"</span></div>` : ''}
         </div>
 
-        ${demoButtonsHtml}
+        <div class="order-history-actions">
+          <button
+            type="button"
+            class="btn-text-danger"
+            data-order-delete-id="${order.id}"
+            title="Hapus pesanan dari riwayat">
+            Hapus dari riwayat
+          </button>
+        </div>
       `;
 
-      ordersListContainer.appendChild(orderCard);
+      orderHistoryList.appendChild(orderCard);
     });
 
-    // Event Listener untuk Tombol Kontrol Demo Status
-    ordersListContainer.querySelectorAll('.demo-step-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const orderId = Number(e.currentTarget.getAttribute('data-order-id'));
-        const stepIndex = Number(e.currentTarget.getAttribute('data-step-index'));
-        setOrderStatus(orderId, stepIndex);
-      });
-    });
-
-    ordersListContainer.querySelectorAll('.btn-next-status').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const orderId = Number(e.currentTarget.getAttribute('data-order-id'));
-        advanceOrderStatus(orderId);
-      });
-    });
-
-    ordersListContainer.querySelectorAll('[data-order-delete-id]').forEach(btn => {
+    orderHistoryList.querySelectorAll('[data-order-delete-id]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         const orderId = Number(e.currentTarget.getAttribute('data-order-delete-id'));
         deleteOrder(orderId);
@@ -725,7 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
      ------------------------------------------------------ */
   renderMenu();
   renderCart();
-  renderOrders();
+  renderOrderHistory();
 
-  console.log('✅ Panganin App berhasil diinisialisasi dengan data localStorage.');
+  console.log('Panganin App berhasil diinisialisasi dengan data localStorage.');
 });
