@@ -1,3 +1,4 @@
+
 const MENU_API_URL = './api/products.php';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,28 +53,60 @@ document.addEventListener('DOMContentLoaded', () => {
     setStatus('Memuat katalog makanan...', 'loading');
 
     try {
-      const response = await fetch(MENU_API_URL, { method: 'GET', credentials: 'same-origin' });
+      const response = await fetch(MENU_API_URL, {
+        method: 'GET',
+        credentials: 'same-origin'
+      });
+
       if (!response.ok) {
-        throw new Error(`Permintaan katalog gagal dengan status HTTP ${response.status}.`);
+        throw new Error(
+          `Permintaan katalog gagal dengan status HTTP ${response.status}.`
+        );
       }
 
-      const menuItems = await response.json();
+      let menuItems;
+
+      try {
+        menuItems = await response.json();
+      } catch {
+        throw new Error('Respons server bukan JSON yang valid.');
+      }
+
       const ids = new Set();
-      if (!Array.isArray(menuItems) || menuItems.some(item => !isValidMenuItem(item, ids))) {
+
+      if (
+        !Array.isArray(menuItems) ||
+        menuItems.some(item => !isValidMenuItem(item, ids))
+      ) {
         throw new Error('Format data menu kantin tidak valid.');
       }
 
       if (menuItems.length === 0) {
         setStatus('Belum ada menu yang dapat ditampilkan.', 'empty');
-        document.dispatchEvent(new CustomEvent('panganin:menu-loaded', { detail: menuItems }));
+
+        document.dispatchEvent(
+          new CustomEvent('panganin:menu-loaded', {
+            detail: menuItems
+          })
+        );
+
         return;
       }
 
       setStatus('', 'success');
-      document.dispatchEvent(new CustomEvent('panganin:menu-loaded', { detail: menuItems }));
+
+      document.dispatchEvent(
+        new CustomEvent('panganin:menu-loaded', {
+          detail: menuItems
+        })
+      );
     } catch (error) {
       console.error('Gagal memuat katalog menu kantin:', error);
-      setStatus('Katalog menu gagal dimuat. Periksa koneksi, lalu coba lagi.', 'error');
+
+      setStatus(
+        'Katalog menu gagal dimuat. Periksa koneksi, lalu coba lagi.',
+        'error'
+      );
     }
   }
 
