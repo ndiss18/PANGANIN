@@ -1,0 +1,138 @@
+[
+  {
+    "id": 101,
+    "name": "Nasi Goreng",
+    "price": 15000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80",
+    "description": "Nasi goreng bumbu gurih khas kantin kampus dengan telur, suwiran ayam, dan kerupuk."
+  },
+  {
+    "id": 102,
+    "name": "Nasi Ayam Geprek",
+    "price": 18000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80",
+    "description": "Nasi hangat dengan ayam goreng dan sambal geprek."
+  },
+  {
+    "id": 103,
+    "name": "Nasi Telur",
+    "price": 12000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
+    "description": "Nasi dengan telur dan lauk sederhana untuk makan siang."
+  },
+  {
+    "id": 104,
+    "name": "Nasi Ayam Penyet",
+    "price": 18000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80",
+    "description": "Ayam goreng penyet dengan nasi dan sambal."
+  },
+  {
+    "id": 105,
+    "name": "Nasi Pecel",
+    "price": 13000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80",
+    "description": "Nasi dengan sayuran rebus dan siraman bumbu kacang."
+  },
+  {
+    "id": 106,
+    "name": "Nasi Rames",
+    "price": 15000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
+    "description": "Nasi dengan pilihan lauk dan sayur rumahan."
+  },
+  {
+    "id": 107,
+    "name": "Mie Goreng",
+    "price": 13000,
+    "category": "Mie dan bakso",
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Mie goreng berbumbu dengan sayuran dan telur."
+  },
+  {
+    "id": 108,
+    "name": "Mie Ayam",
+    "price": 13000,
+    "category": "Mie dan bakso",
+    "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80",
+    "description": "Mie kenyal dengan ayam kecap, sawi hijau, dan kuah kaldu."
+  },
+  {
+    "id": 109,
+    "name": "Bakso",
+    "price": 14000,
+    "category": "Mie dan bakso",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
+    "description": "Bakso dengan kuah hangat, mie, dan sayuran."
+  },
+  {
+    "id": 110,
+    "name": "Soto Ayam",
+    "price": 15000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
+    "description": "Soto ayam berkuah gurih dengan nasi dan pelengkap."
+  },
+  {
+    "id": 111,
+    "name": "Nasi Kuning",
+    "price": 14000,
+    "category": "Makanan berat",
+    "image": "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80",
+    "description": "Nasi berbumbu kunyit dengan lauk dan pelengkap."
+  },
+  {
+    "id": 112,
+    "name": "Tempe Goreng",
+    "price": 3000,
+    "category": "Lauk dan gorengan",
+    "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80",
+    "description": "Tempe berbumbu yang digoreng hingga renyah."
+  },
+  {
+    "id": 113,
+    "name": "Tahu Isi",
+    "price": 3000,
+    "category": "Lauk dan gorengan",
+    "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80",
+    "description": "Tahu goreng berisi sayuran dengan kulit renyah."
+  },
+  {
+    "id": 114,
+    "name": "Es Teh",
+    "price": 5000,
+    "category": "Minuman",
+    "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80",
+    "description": "Seduhan teh melati dengan es batu yang menyegarkan."
+  },
+  {
+    "id": 115,
+    "name": "Es Jeruk",
+    "price": 7000,
+    "category": "Minuman",
+    "image": "https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=600&q=80",
+    "description": "Minuman jeruk segar yang disajikan dengan es."
+  },
+  {
+    "id": 116,
+    "name": "Kopi",
+    "price": 8000,
+    "category": "Minuman",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80",
+    "description": "Kopi racikan kantin untuk menemani kuliah."
+  },
+  {
+    "id": 117,
+    "name": "Roti Bakar",
+    "price": 10000,
+    "category": "Camilan",
+    "image": "https://images.unsplash.com/photo-1584776296944-ab6fb57b0bdd?auto=format&fit=crop&w=600&q=80",
+    "description": "Roti panggang dengan isian cokelat dan keju."
+  }
+]
