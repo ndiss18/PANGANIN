@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let cart = loadFromLocalStorage('panganin_cart', []);
   let orders = loadFromLocalStorage('panganin_orders', []);
   let MENU_DATA = [];
+  let currentUser = null;
+  let csrfToken = '';
 
   function loadFromLocalStorage(key, defaultValue) {
     try {
@@ -40,6 +42,46 @@ document.addEventListener('DOMContentLoaded', () => {
   // Format angka ke format Rupiah (e.g. 15000 -> Rp15.000)
   function formatRupiah(number) {
     return 'Rp' + Number(number).toLocaleString('id-ID');
+  }
+
+  async function loadCurrentSession() {
+    const response = await fetch('api/session.php', { credentials: 'same-origin' });
+    const session = await response.json();
+    if (!response.ok) {
+      throw new Error(session.error || 'Sesi akun tidak dapat diperiksa.');
+    }
+
+    currentUser = session.user;
+    csrfToken = session.csrf_token;
+
+    const status = document.getElementById('account-status');
+    const loginLink = document.getElementById('login-link');
+    const registerLink = document.getElementById('register-link');
+    const logoutForm = document.getElementById('logout-form');
+    const logoutToken = document.getElementById('logout-csrf-token');
+    const managementLink = document.getElementById('management-link');
+    const nameInput = document.getElementById('student-name');
+
+    if (currentUser) {
+      if (status) status.textContent = `Masuk sebagai ${currentUser.nama} (${currentUser.role}).`;
+      if (loginLink) loginLink.classList.add('hidden');
+      if (registerLink) registerLink.classList.add('hidden');
+      if (logoutForm) logoutForm.classList.remove('hidden');
+      if (logoutToken) logoutToken.value = csrfToken;
+      if (managementLink && ['admin', 'umkm'].includes(currentUser.role)) {
+        managementLink.classList.remove('hidden');
+      }
+      if (nameInput) {
+        nameInput.value = currentUser.nama;
+        nameInput.readOnly = true;
+      }
+      return;
+    }
+
+    if (status) status.textContent = 'Masuk atau daftar untuk menyimpan pesanan ke akunmu.';
+    if (logoutForm) logoutForm.classList.add('hidden');
+    if (managementLink) managementLink.classList.add('hidden');
+    if (nameInput) nameInput.readOnly = false;
   }
 
   function escapeHtml(value) {
@@ -405,9 +447,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (checkoutForm) {
-    checkoutForm.addEventListener('submit', (e) => {
+    checkoutForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       hideCheckoutError();
+
+      if (!currentUser) {
+        showCheckoutError('Silakan masuk atau daftar terlebih dahulu sebelum membuat pesanan.');
+        return;
+      }
 
       // 1. Validasi isi keranjang
       if (cart.length === 0) {
@@ -449,51 +496,64 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // 4. Generate Nomor Pesanan Unik
-      const timestamp = new Date();
-      const randomNum = Math.floor(1000 + Math.random() * 9000);
-      const orderNumber = `#PGN-${randomNum}`;
+      const submitButton = document.getElementById('btn-submit-order');
+      if (submitButton) submitButton.disabled = true;
 
-      // Format Waktu Indonesia (e.g. 12:45 WIB)
-      const hours = String(timestamp.getHours()).padStart(2, '0');
-      const minutes = String(timestamp.getMinutes()).padStart(2, '0');
-      const timeString = `${hours}:${minutes} WIB`;
+      try {
+        const response = await fetch('api/orders.php', {
+          method: 'POST',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': csrfToken
+          },
+          body: JSON.stringify({
+            items: cart.map(item => ({
+              product_id: Number(String(item.id).replace(/^api-/, '')),
+              quantity: item.qty
+            })),
+            pickup_location: location,
+            notes
+          })
+        });
+        const result = await response.json();
+        if (!response.ok) {
+          throw new Error(result.error || 'Pesanan tidak dapat disimpan.');
+        }
 
-      // Menghitung Total
-      const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+        const timestamp = new Date();
+        const timeString = `${String(timestamp.getHours()).padStart(2, '0')}:${String(timestamp.getMinutes()).padStart(2, '0')} WIB`;
+        const orderNumber = `#${result.kode_pembayaran}`;
+        const newOrder = {
+          id: result.order_id,
+          orderNumber,
+          createdAt: timeString,
+          student: { name, location, notes },
+          items: [...cart],
+          totalPrice: Number(result.total_harga)
+        };
 
-      // 5. Buat Objek Pesanan Baru
-      const newOrder = {
-        id: Date.now(),
-        orderNumber: orderNumber,
-        createdAt: timeString,
-        student: {
-          name: name,
-          location: location,
-          notes: notes
-        },
-        items: [...cart], // salinan item saat checkout
-        totalPrice: totalPrice
-      };
+        orders.unshift(newOrder);
+        saveToLocalStorage('panganin_orders', orders);
+        cart = [];
+        saveToLocalStorage('panganin_cart', cart);
+        renderCart();
+        checkoutForm.reset();
+        if (currentUser && inputName) {
+          inputName.value = currentUser.nama;
+          inputName.readOnly = true;
+        }
 
-      // Simpan pesanan terbaru di awal riwayat
-      orders.unshift(newOrder);
-      saveToLocalStorage('panganin_orders', orders);
-
-      // 6. Kosongkan Keranjang & Reset Form
-      cart = [];
-      saveToLocalStorage('panganin_cart', cart);
-      renderCart();
-      checkoutForm.reset();
-
-      // 7. Perbarui riwayat pesanan
-      renderOrderHistory();
-      showToast(`Pesanan ${orderNumber} berhasil dibuat!`, 'success');
-
-      // Arahkan ke riwayat setelah checkout berhasil
-      const orderHistorySection = document.getElementById('riwayat-pesanan');
-      if (orderHistorySection) {
-        orderHistorySection.scrollIntoView({ behavior: 'smooth' });
+        renderOrderHistory();
+        showToast(`Pesanan ${orderNumber} berhasil dibuat!`, 'success');
+        const orderHistorySection = document.getElementById('riwayat-pesanan');
+        if (orderHistorySection) {
+          orderHistorySection.scrollIntoView({ behavior: 'smooth' });
+        }
+      } catch (error) {
+        showCheckoutError(error instanceof Error ? error.message : 'Pesanan tidak dapat disimpan.');
+      } finally {
+        if (submitButton) submitButton.disabled = false;
       }
     });
   }
@@ -618,6 +678,11 @@ document.addEventListener('DOMContentLoaded', () => {
   renderMenu();
   renderCart();
   renderOrderHistory();
+  loadCurrentSession().catch(error => {
+    console.error('Gagal memeriksa sesi akun:', error);
+    const status = document.getElementById('account-status');
+    if (status) status.textContent = 'Sesi akun tidak dapat diperiksa. Coba muat ulang halaman.';
+  });
 
   console.log('Panganin App berhasil diinisialisasi dengan data localStorage.');
 });

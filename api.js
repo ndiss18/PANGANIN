@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setStatus('Memuat katalog makanan...', 'loading');
 
     try {
+<<<<<<< HEAD
       const response = await fetch(MENU_API_URL, { method: 'GET' });
       if (!response.ok) {
         throw new Error(`Permintaan katalog gagal dengan status HTTP ${response.status}.`);
@@ -60,20 +61,73 @@ document.addEventListener('DOMContentLoaded', () => {
       const menuItems = await response.json();
       const ids = new Set();
       if (!Array.isArray(menuItems) || menuItems.some(item => !isValidMenuItem(item, ids))) {
+=======
+      const response = await fetch(MENU_API_URL, {
+        method: 'GET',
+        credentials: 'same-origin'
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `Permintaan katalog gagal dengan status HTTP ${response.status}.`
+        );
+      }
+
+      let menuItems;
+
+      try {
+        menuItems = await response.json();
+      } catch {
+        throw new Error('Respons server bukan JSON yang valid.');
+      }
+
+      const ids = new Set();
+
+      if (
+        !Array.isArray(menuItems) ||
+        menuItems.some(item => !isValidMenuItem(item, ids))
+      ) {
+>>>>>>> origin/main
         throw new Error('Format data menu kantin tidak valid.');
       }
 
       if (menuItems.length === 0) {
         setStatus('Belum ada menu yang dapat ditampilkan.', 'empty');
+<<<<<<< HEAD
         document.dispatchEvent(new CustomEvent('panganin:menu-loaded', { detail: menuItems }));
+=======
+
+        document.dispatchEvent(
+          new CustomEvent('panganin:menu-loaded', {
+            detail: menuItems
+          })
+        );
+
+>>>>>>> origin/main
         return;
       }
 
       setStatus('', 'success');
+<<<<<<< HEAD
       document.dispatchEvent(new CustomEvent('panganin:menu-loaded', { detail: menuItems }));
     } catch (error) {
       console.error('Gagal memuat katalog menu kantin:', error);
       setStatus('Katalog menu gagal dimuat. Periksa koneksi, lalu coba lagi.', 'error');
+=======
+
+      document.dispatchEvent(
+        new CustomEvent('panganin:menu-loaded', {
+          detail: menuItems
+        })
+      );
+    } catch (error) {
+      console.error('Gagal memuat katalog menu kantin:', error);
+
+      setStatus(
+        'Katalog menu gagal dimuat. Periksa koneksi, lalu coba lagi.',
+        'error'
+      );
+>>>>>>> origin/main
     }
   }
 
