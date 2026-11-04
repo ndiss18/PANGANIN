@@ -222,10 +222,10 @@
             <h3 class="box-title">Form Pemesanan Mahasiswa</h3>
             <p id="account-status" class="form-hint">Memeriksa sesi akun...</p>
             <div id="account-actions" class="form-group">
-              <a id="login-link" class="btn btn-secondary btn-sm" href="auth/login.php">Masuk</a>
-              <a id="register-link" class="btn btn-secondary btn-sm" href="auth/register.php">Daftar</a>
-              <a id="management-link" class="btn btn-secondary btn-sm hidden" href="products/index.php">Kelola Menu</a>
-              <form id="logout-form" action="auth/logout.php" method="post" class="hidden">
+              <a id="login-link" class="btn btn-secondary btn-sm" href="index.php?route=login">Masuk</a>
+              <a id="register-link" class="btn btn-secondary btn-sm" href="index.php?route=register">Daftar</a>
+              <a id="management-link" class="btn btn-secondary btn-sm hidden" href="index.php?route=products%2Fmanage">Kelola Menu</a>
+              <form id="logout-form" action="index.php?route=logout" method="post" class="hidden">
                 <input id="logout-csrf-token" type="hidden" name="csrf_token" value="">
                 <button type="submit" class="btn-text-danger">Keluar</button>
               </form>

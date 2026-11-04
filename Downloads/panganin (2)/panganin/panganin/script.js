@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
      2. STATE MANAGEMENT (LOCAL STORAGE)
      ------------------------------------------------------ */
   let cart = loadFromLocalStorage('panganin_cart', []);
-  let orders = loadFromLocalStorage('panganin_orders', []);
+  let orders = [];
   let MENU_DATA = [];
   let currentUser = null;
   let csrfToken = '';
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function loadCurrentSession() {
-    const response = await fetch('api/session.php', { credentials: 'same-origin' });
+    const response = await fetch('index.php?route=api%2Fsession', { credentials: 'same-origin' });
     const session = await response.json();
     if (!response.ok) {
       throw new Error(session.error || 'Sesi akun tidak dapat diperiksa.');
@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nameInput.value = currentUser.nama;
         nameInput.readOnly = true;
       }
+      await loadOrderHistory();
       return;
     }
 
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (logoutForm) logoutForm.classList.add('hidden');
     if (managementLink) managementLink.classList.add('hidden');
     if (nameInput) nameInput.readOnly = false;
+    await loadOrderHistory();
   }
 
   function escapeHtml(value) {
@@ -197,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const title = document.createElement('h3');
       title.className = 'card-title';
-      title.textContent = item.name;
+      title.innerHTML = `<a href="index.php?route=products%2Fshow&amp;id=${item.id}">${escapeHtml(item.name)}</a>`;
 
       const description = document.createElement('p');
       description.className = 'card-desc';
@@ -500,7 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (submitButton) submitButton.disabled = true;
 
       try {
-        const response = await fetch('api/orders.php', {
+        const response = await fetch('index.php?route=api%2Forders', {
           method: 'POST',
           credentials: 'same-origin',
           headers: {
@@ -521,20 +523,6 @@ document.addEventListener('DOMContentLoaded', () => {
           throw new Error(result.error || 'Pesanan tidak dapat disimpan.');
         }
 
-        const timestamp = new Date();
-        const timeString = `${String(timestamp.getHours()).padStart(2, '0')}:${String(timestamp.getMinutes()).padStart(2, '0')} WIB`;
-        const orderNumber = `#${result.kode_pembayaran}`;
-        const newOrder = {
-          id: result.order_id,
-          orderNumber,
-          createdAt: timeString,
-          student: { name, location, notes },
-          items: [...cart],
-          totalPrice: Number(result.total_harga)
-        };
-
-        orders.unshift(newOrder);
-        saveToLocalStorage('panganin_orders', orders);
         cart = [];
         saveToLocalStorage('panganin_cart', cart);
         renderCart();
@@ -544,8 +532,8 @@ document.addEventListener('DOMContentLoaded', () => {
           inputName.readOnly = true;
         }
 
-        renderOrderHistory();
-        showToast(`Pesanan ${orderNumber} berhasil dibuat!`, 'success');
+        await loadOrderHistory();
+        showToast(`Pesanan #${result.kode_pembayaran} berhasil dibuat!`, 'success');
         const orderHistorySection = document.getElementById('riwayat-pesanan');
         if (orderHistorySection) {
           orderHistorySection.scrollIntoView({ behavior: 'smooth' });
@@ -564,12 +552,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const orderHistoryEmpty = document.getElementById('order-history-empty');
   const orderHistoryList = document.getElementById('order-history-list');
 
-  function deleteOrder(orderId) {
-    if (!confirm('Hapus riwayat pesanan ini?')) return;
-    orders = orders.filter(o => o.id !== orderId);
-    saveToLocalStorage('panganin_orders', orders);
-    renderOrderHistory();
-    showToast('Pesanan telah dihapus dari daftar.', 'info');
+  async function loadOrderHistory() {
+    if (!currentUser) {
+      orders = [];
+      renderOrderHistory();
+      return;
+    }
+
+    try {
+      const response = await fetch('index.php?route=api%2Forders', { credentials: 'same-origin' });
+      const result = await response.json();
+      if (!response.ok || !Array.isArray(result)) {
+        throw new Error(result.error || 'Riwayat pesanan tidak dapat dimuat.');
+      }
+      orders = result;
+      renderOrderHistory();
+    } catch (error) {
+      console.error('Gagal memuat riwayat pesanan:', error);
+      if (orderHistoryEmpty) {
+        orderHistoryEmpty.classList.remove('hidden');
+        const description = orderHistoryEmpty.querySelector('p');
+        if (description) description.textContent = 'Riwayat pesanan tidak dapat dimuat. Silakan coba muat ulang halaman.';
+      }
+    }
   }
 
   function renderOrderHistory() {
@@ -623,25 +628,9 @@ document.addEventListener('DOMContentLoaded', () => {
           ${order.student.notes ? `<div class="order-notes-tag"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><path d="m14 4 6 6M4 20l4.3-.9L19 8.4 15.6 5 4.9 15.7 4 20Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Catatan: "${escapeHtml(order.student.notes)}"</span></div>` : ''}
         </div>
 
-        <div class="order-history-actions">
-          <button
-            type="button"
-            class="btn-text-danger"
-            data-order-delete-id="${order.id}"
-            title="Hapus pesanan dari riwayat">
-            Hapus dari riwayat
-          </button>
-        </div>
       `;
 
       orderHistoryList.appendChild(orderCard);
-    });
-
-    orderHistoryList.querySelectorAll('[data-order-delete-id]').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const orderId = Number(e.currentTarget.getAttribute('data-order-delete-id'));
-        deleteOrder(orderId);
-      });
     });
   }
 

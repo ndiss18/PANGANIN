@@ -1,4 +1,4 @@
-const MENU_API_URL = './api/products.php';
+const MENU_API_URL = './index.php?route=api%2Fproducts';
 
 document.addEventListener('DOMContentLoaded', () => {
   const statusElement = document.getElementById('menu-status');
@@ -53,11 +53,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const response = await fetch(MENU_API_URL, { method: 'GET', credentials: 'same-origin' });
-      if (!response.ok) {
-        throw new Error(`Permintaan katalog gagal dengan status HTTP ${response.status}.`);
+      let menuItems;
+      try {
+        menuItems = await response.json();
+      } catch (error) {
+        throw new Error('Respons server bukan JSON. Pastikan Apache menjalankan PHP dan URL proyek dibuka melalui localhost.');
       }
 
-      const menuItems = await response.json();
+      if (!response.ok) {
+        throw new Error(
+          menuItems && typeof menuItems.error === 'string'
+            ? menuItems.error
+            : `Permintaan katalog gagal dengan status HTTP ${response.status}.`
+        );
+      }
+
       const ids = new Set();
       if (!Array.isArray(menuItems) || menuItems.some(item => !isValidMenuItem(item, ids))) {
         throw new Error('Format data menu kantin tidak valid.');
@@ -73,7 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
       document.dispatchEvent(new CustomEvent('panganin:menu-loaded', { detail: menuItems }));
     } catch (error) {
       console.error('Gagal memuat katalog menu kantin:', error);
-      setStatus('Katalog menu gagal dimuat. Periksa koneksi, lalu coba lagi.', 'error');
+      setStatus(
+        error instanceof Error ? error.message : 'Katalog menu gagal dimuat. Periksa koneksi, lalu coba lagi.',
+        'error'
+      );
     }
   }
 
